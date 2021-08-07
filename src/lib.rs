@@ -9,5 +9,7 @@
 //! - `no_std`: Uses the `core` crate instead of `std` crate.
 
 mod abstract_source;
+mod abstract_source_collection;
 
 pub use abstract_source::AbstractSource;
+pub use abstract_source_collection::AbstractSourceCollection;
