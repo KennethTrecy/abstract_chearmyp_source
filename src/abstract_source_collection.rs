@@ -1,7 +1,7 @@
 use crate::AbstractSource;
 
 /// An abstraction of source collection.
-pub trait AbstractSourceCollection : IntoIterator {
+pub trait AbstractSourceCollection {
 	/// The type of source the collection contains.
 	type Source: AbstractSource;
 
