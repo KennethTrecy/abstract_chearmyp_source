@@ -4,7 +4,7 @@ pub trait AbstractSource {
 	/// indicating the index where to start slicing.
 	fn forward_slice(&self, _: usize) -> &Self;
 
-	/// Check if the source still has contents
+	/// Check if the source if it still has contents.
 	fn is_empty(&self) -> bool;
 
 	/// Checks if the has a byte at the targeted index. Equivalent to running `source[n] == m` where
