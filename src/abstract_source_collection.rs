@@ -14,3 +14,6 @@ pub trait AbstractSourceCollection : IntoIterator {
 	/// Add the source into the collection.
 	fn add_source(&mut self, _: Self::Source);
 }
+
+#[cfg(feature = "vec_source_collection")]
+mod vec;
