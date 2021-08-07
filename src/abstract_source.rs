@@ -12,3 +12,6 @@ pub trait AbstractSource {
 	/// indicating the byte it will be compared to.
 	fn is_equal_at(&self, _: usize, _: u8) -> bool;
 }
+
+#[cfg(feature = "str_source")]
+mod str;
