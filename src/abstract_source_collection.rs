@@ -10,4 +10,7 @@ pub trait AbstractSourceCollection : IntoIterator {
 
 	/// Gets the source at the specified index.
 	fn get_source(&self, _: usize) -> Option<&Self::Source>;
+
+	/// Add the source into the collection.
+	fn add_source(&mut self, _: Self::Source);
 }
