@@ -15,3 +15,6 @@ pub trait AbstractSource {
 
 #[cfg(feature = "str_source")]
 mod str;
+
+#[cfg(feature = "slice_u8_source")]
+mod slice_u8;

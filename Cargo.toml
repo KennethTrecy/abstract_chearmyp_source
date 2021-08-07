@@ -7,3 +7,4 @@ edition = "2018"
 [features]
 default = []
 str_source = []
+slice_u8_source = []
