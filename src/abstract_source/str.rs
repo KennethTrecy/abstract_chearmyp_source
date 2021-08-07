@@ -1,16 +1,16 @@
 use crate::AbstractSource;
 
 /// This is only available if `str_source` feature has been activated.
-impl AbstractSource for str {
-	fn forward_slice(&self, start_index: usize) -> &str {
+impl AbstractSource for &str {
+	fn forward_slice(self, start_index: usize) -> Self {
 		&self[start_index..]
 	}
 
-	fn is_empty(&self) -> bool {
+	fn is_empty(self) -> bool {
 		self.is_empty()
 	}
 
-	fn is_equal_at(&self, index: usize, byte: u8) -> bool {
+	fn is_equal_at(self, index: usize, byte: u8) -> bool {
 		self.get(index..index+1)
 			.unwrap_or("")
 			.as_bytes()

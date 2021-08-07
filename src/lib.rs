@@ -4,7 +4,7 @@
 //! Please read the README.md for more information.
 //!
 //! ## Features available
-//! - `str_source`: Implements [AbstractSource] for [str].
+//! - `str_source`: Implements [AbstractSource] for &[str].
 //! - `slice_u8_source`: Implements [AbstractSource] for `&[u8]` [slice].
 //! - `no_std`: Uses the `core` crate instead of `std` crate.
 

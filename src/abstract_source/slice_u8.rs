@@ -1,16 +1,16 @@
 use crate::AbstractSource;
 
 /// This is only available if `slice_u8_source` feature has been activated.
-impl AbstractSource for [u8] {
-	fn forward_slice(&self, start_index: usize) -> &[u8] {
+impl AbstractSource for &[u8] {
+	fn forward_slice(self, start_index: usize) -> Self {
 		&self[start_index..]
 	}
 
-	fn is_empty(&self) -> bool {
+	fn is_empty(self) -> bool {
 		self.is_empty()
 	}
 
-	fn is_equal_at(&self, index: usize, byte: u8) -> bool {
+	fn is_equal_at(self, index: usize, byte: u8) -> bool {
 		self.get(index) == Some(&byte)
 	}
 }
