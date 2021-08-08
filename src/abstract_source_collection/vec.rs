@@ -3,6 +3,10 @@ use alloc::vec::Vec;
 
 use crate::{AbstractSource, AbstractSourceCollection};
 
+/// This is only available if `vec_source_collection` feature has been activated.
+///
+/// It implements [AbstractSourceCollection] for alloc::vec::[Vec] instead if `no_std` feature has
+/// been activated.
 impl<T> AbstractSourceCollection for Vec<T>
 where
 	T: AbstractSource {
