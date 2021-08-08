@@ -1,17 +1,17 @@
-# Chearmyp Abstract Source
+# Abstract Chearmyp Source
 An abstraction of sources that can be processed by lexer and parser, and contained by different structures.
 
 ## Installation
 Add it to the dependencies:
 ```
-chearmyp_abstract_source = { git = "http://chearmyp.local/chearmyp_abstract_source", tag = "v0.2.0" }
+abstract_chearmyp_source = { git = "http://chearmyp.local/abstract_chearmyp_source", tag = "v0.3.0" }
 ```
 
 You may also activate all the features:
 ```
-[dependencies.chearmyp_abstract_source]
-git = "http://chearmyp.local/chearmyp_abstract_source"
-tag = "v0.2.0"
+[dependencies.abstract_chearmyp_source]
+git = "http://chearmyp.local/abstract_chearmyp_source"
+tag = "v0.3.0"
 features = ["no_std", "str_source", "slice_u8_source", "vec_source_collection"]
 ```
 
