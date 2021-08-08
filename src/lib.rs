@@ -1,6 +1,6 @@
 #![cfg_attr(feature = "no_std", no_std)]
 
-//! # Chearmyp Abstract Source
+//! # Abstract Chearmyp Source
 //! Please read the README.md for more information.
 //!
 //! ## Features available
