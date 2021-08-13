@@ -1,8 +1,10 @@
 use crate::AbstractSource;
 
 /// This is only available if `str_source` feature has been activated.
-impl AbstractSource for &str {
-	fn forward_slice(self, start_index: usize) -> Self {
+impl<'a> AbstractSource for &'a str {
+	type Slice = &'a str;
+
+	fn forward_slice(&self, start_index: usize) -> Self::Slice {
 		&self[start_index..]
 	}
 

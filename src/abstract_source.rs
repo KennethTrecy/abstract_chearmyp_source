@@ -1,8 +1,11 @@
 /// An abstraction of source.
 pub trait AbstractSource {
+	/// The type of slice it would return after forward slicing.
+	type Slice;
+
 	/// Creates a forward slice. Equivalent to running `&source[n..]` where `n` is the first argument
 	/// indicating the index where to start slicing.
-	fn forward_slice(self, _: usize) -> Self;
+	fn forward_slice(&self, _: usize) -> Self::Slice;
 
 	/// Check if the source if it still has contents.
 	fn is_empty(self) -> bool;

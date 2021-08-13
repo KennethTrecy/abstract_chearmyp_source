@@ -1,8 +1,10 @@
 use crate::AbstractSource;
 
 /// This is only available if `slice_u8_source` feature has been activated.
-impl AbstractSource for &[u8] {
-	fn forward_slice(self, start_index: usize) -> Self {
+impl<'a> AbstractSource for &'a [u8] {
+	type Slice = &'a [u8];
+
+	fn forward_slice(&self, start_index: usize) -> Self::Slice {
 		&self[start_index..]
 	}
 
@@ -21,7 +23,7 @@ mod t {
 
 	#[test]
 	fn can_forward_slice() {
-		let source = b"ab";
+		let source = &b"ab"[..];
 		let index = 1;
 
 		let slice = source.forward_slice(index);
