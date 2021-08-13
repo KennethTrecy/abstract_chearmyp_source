@@ -8,11 +8,11 @@ impl<'a> AbstractSource for &'a str {
 		&self[start_index..]
 	}
 
-	fn is_empty(self) -> bool {
-		self.is_empty()
+	fn is_empty(&self) -> bool {
+		self.len() == 0
 	}
 
-	fn is_equal_at(self, index: usize, byte: u8) -> bool {
+	fn is_equal_at(&self, index: usize, byte: u8) -> bool {
 		self.get(index..index+1)
 			.unwrap_or("")
 			.as_bytes()

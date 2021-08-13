@@ -8,12 +8,12 @@ pub trait AbstractSource {
 	fn forward_slice(&self, _: usize) -> Self::Slice;
 
 	/// Check if the source if it still has contents.
-	fn is_empty(self) -> bool;
+	fn is_empty(&self) -> bool;
 
 	/// Checks if the has a byte at the targeted index. Equivalent to running `source[n] == m` where
 	/// `n` is the first argument indicating the index to check and `m` is the second argument
 	/// indicating the byte it will be compared to.
-	fn is_equal_at(self, _: usize, _: u8) -> bool;
+	fn is_equal_at(&self, _: usize, _: u8) -> bool;
 }
 
 #[cfg(feature = "str_source")]

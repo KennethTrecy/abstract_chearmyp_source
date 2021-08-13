@@ -8,11 +8,11 @@ impl<'a> AbstractSource for &'a [u8] {
 		&self[start_index..]
 	}
 
-	fn is_empty(self) -> bool {
-		self.is_empty()
+	fn is_empty(&self) -> bool {
+		self.len() == 0
 	}
 
-	fn is_equal_at(self, index: usize, byte: u8) -> bool {
+	fn is_equal_at(&self, index: usize, byte: u8) -> bool {
 		self.get(index) == Some(&byte)
 	}
 }
@@ -33,7 +33,7 @@ mod t {
 
 	#[test]
 	fn should_be_empty() {
-		let source = b"";
+		let source = &b""[..];
 
 		let is_empty = source.is_empty();
 
@@ -42,7 +42,7 @@ mod t {
 
 	#[test]
 	fn should_not_be_empty() {
-		let source = b"c";
+		let source = &b"c"[..];
 
 		let is_empty = source.is_empty();
 
@@ -51,7 +51,7 @@ mod t {
 
 	#[test]
 	fn should_be_equal() {
-		let source = b"d";
+		let source = &b"d"[..];
 		let index = 0;
 		let byte = 'd' as u8;
 
@@ -62,7 +62,7 @@ mod t {
 
 	#[test]
 	fn should_not_be_equal() {
-		let source = b"e";
+		let source = &b"e"[..];
 		let index = 0;
 		let byte = 'f' as u8;
 
@@ -73,7 +73,7 @@ mod t {
 
 	#[test]
 	fn may_not_compare_unreachable() {
-		let source = b"g";
+		let source = &b"g"[..];
 		let index = 1;
 		let byte = 'h' as u8;
 
