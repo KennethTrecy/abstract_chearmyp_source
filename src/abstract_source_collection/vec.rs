@@ -7,20 +7,14 @@ use crate::{AbstractSource, AbstractSourceCollection};
 ///
 /// It implements [AbstractSourceCollection] for alloc::vec::[Vec] instead if `no_std` feature has
 /// been activated.
-impl<T> AbstractSourceCollection for Vec<T>
+impl<T> AbstractSourceCollection<T> for Vec<T>
 where
 	T: AbstractSource {
-	type Source = T;
-
-	fn new() -> Self {
-		Vec::new()
-	}
-
-	fn get_source(&self, index: usize) -> Option<&Self::Source> {
+	fn get_source(&self, index: usize) -> Option<&T> {
 		self.get(index)
 	}
 
-	fn add_source(&mut self, source: Self::Source) {
+	fn add_source(&mut self, source: T) {
 		self.push(source);
 	}
 }
@@ -32,7 +26,7 @@ mod t {
 
 	#[test]
 	fn can_create_new_collection() {
-		let collection = <Vec<&[u8]> as AbstractSourceCollection>::new();
+		let collection = Vec::<&[u8]>::new();
 
 		assert_eq!(collection, Vec::<&[u8]>::new());
 	}
@@ -48,7 +42,7 @@ mod t {
 
 	#[test]
 	fn can_add_source() {
-		let mut collection = <Vec<&str> as AbstractSourceCollection>::new();
+		let mut collection = Vec::<&str>::new();
 
 		collection.add_source("b");
 
