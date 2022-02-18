@@ -2,7 +2,7 @@
 name = "abstract_chearmyp_source"
 version = "0.5.0-dev"
 authors = ["Kenneth Trecy Tobias <33564322+KennethTrecy@users.noreply.github.com>"]
-edition = "2018"
+edition = "2021"
 
 [features]
 default = []
