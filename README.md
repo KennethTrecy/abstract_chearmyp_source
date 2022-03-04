@@ -1,5 +1,7 @@
 # Abstract Chearmyp Source
-An abstraction of sources that can be processed by lexer and parser, and contained by different structures.
+An abstraction of sources that can be processed by lexer and parser, and contained by different data structures.
+
+Initially intended for Chearmyp lexer and parser but it can be used to other projects as well.
 
 ## Installation
 Add it to the dependencies:
