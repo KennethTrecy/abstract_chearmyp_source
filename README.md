@@ -28,5 +28,8 @@ Run the following on the console:
 cargo doc --all-features --open
 ```
 
+## Author
+Abstract Chearmyp Source was created by Kenneth Trecy Tobias.
+
 [`filled_bare_metal`]: https://github.com/KennethTrecy/feo_template/tree/filled_bare_metal
 [Feo Template]: https://github.com/KennethTrecy/feo_template
