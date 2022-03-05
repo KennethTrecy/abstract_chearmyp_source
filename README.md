@@ -8,14 +8,14 @@ Add it to the dependencies:
 ```
 [dependencies.abstract_chearmyp_source]
 git = "https://github.com/KennethTrecy/abstract_chearmyp_source"
-tag = "v0.5.2"
+tag = "v0.6.0"
 ```
 
 You may also activate all the features:
 ```
 [dependencies.abstract_chearmyp_source]
 git = "https://github.com/KennethTrecy/abstract_chearmyp_source"
-tag = "v0.5.2"
+tag = "v0.6.0"
 features = ["no_std", "str_source", "slice_u8_source", "vec_source_collection", "str_comparable_to_u8", "str_comparable_to_str", "slice_u8_comparable_to_u8", "slice_u8_comparable_to_str"]
 ```
 
