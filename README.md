@@ -77,7 +77,7 @@ Coded by Kenneth Trecy Tobias.
 
 [`filled_bare_metal`]: https://github.com/KennethTrecy/feo_template/tree/filled_bare_metal
 [Feo Template]: https://github.com/KennethTrecy/feo_template
-[MIT]: https://github.com/KennethTrecy/feo_template/blob/master/LICENSE
+[MIT]: https://github.com/KennethTrecy/abstract_chearmyp_source/blob/master/LICENSE
 [Node.js and NPM]: https://nodejs.org/en/
 [pnpm]: https://pnpm.io/installation
 [Conventional Commits specification]: https://www.conventionalcommits.org/en/v1.0.0/
