@@ -3,6 +3,7 @@ name = "abstract_chearmyp_source"
 version = "1.0.0-dev"
 authors = ["Kenneth Trecy Tobias <web.kennethtobias@gmail.com>"]
 edition = "2021"
+license = "MIT"
 
 [features]
 default = []
